@@ -1,0 +1,36 @@
+<html>
+    <head>
+        <title>Diabetes prediction Model</title>
+    </head>
+
+    <body style="background-color: black;">
+        <h2 style="color:cadetblue">****DIABETES DIAGNOSIS****</h2>
+        <h3 style="color: darkcyan;">Enter some details to get Diabetes diagnosis: </h3>
+        <br>
+        <form action="/Predictions" method="post">
+            <p style="color: white;">
+            Age: <input type="number" name="Age" placeholder="Enter your age" style="width: 240px;">
+            <br><br>
+            Glucose: <input type="number" name="Glucose" placeholder="Enter Glucose" style="width: 215px;">
+            <br><br>
+            BloodPressure: <input type="number" name="BloodPressure" placeholder="Enter BloodPressure">
+            <br><br>
+            SkinThickness: <input type="number" name="SkinThickness" placeholder="Enter your SkinThickness">
+            <br><br>
+            Insulin: <input type="number" name="Insulin" placeholder="Enter Insulin" style="width: 220px;">
+            <br><br>
+            BMI: <input type="number" name="BMI" placeholder="Enter BMI" style="width: 235px;">
+            <br><br></p>
+        
+            <input type="submit" style="font-weight: bolder;">
+            <br>  
+        </form>
+        <br><br>
+        <p style="color: white;">
+            <b style="color: darkcyan;">Predictions: </b> {{output_predictions}}
+            <br>
+            <b style="color: darkcyan;">Probability: </b> {{output_proba}}
+            </p>
+        </body>
+    </html>
+    
